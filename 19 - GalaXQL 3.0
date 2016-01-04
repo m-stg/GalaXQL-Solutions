@@ -1,0 +1,4 @@
+CREATE TRIGGER my_trigger 
+AFTER INSERT ON stars 
+FOR EACH ROW BEGIN DELETE FROM hilight; 
+INSERT INTO hilight Values(NEW.starid); END
